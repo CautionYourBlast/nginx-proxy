@@ -13,4 +13,6 @@ if [ "x$RESOLVERS" = "x" ]; then
     unset RESOLVERS
 fi
 
+echo "Running $@"
+
 exec "$@"

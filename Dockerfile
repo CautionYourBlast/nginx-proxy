@@ -1,8 +1,9 @@
-FROM nginx:1.14.1
+FROM nginx:1.17.0
 
 VOLUME ["/etc/nginx/certs", "/etc/nginx/dhparam"]
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
 
 WORKDIR /app/
 
